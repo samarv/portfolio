@@ -76,7 +76,7 @@
 }
 
 /* Make the 3D work on the container */
-.starwars-demo {
+.homePage {
   perspective: 800px;
   transform-style: preserve3d;
 }
@@ -86,7 +86,7 @@ body {
   background: #000 url(assets/bg.jpg);
 }
 
-.starwars-demo {
+.homePage {
   height: 17em;
   left: 50%;
   position: absolute;
@@ -130,13 +130,13 @@ img {
 /*** Media queries for adjusting to different screen sizes ***/
 
 @media only screen and (max-width: 600px) {
-  .starwars-demo {
+  .homePage {
     font-size: 10px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .starwars-demo {
+  .homePage {
     font-size: 7px;
   }
 }
