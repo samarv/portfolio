@@ -83,7 +83,7 @@
 
 /* General styles and layout */
 body {
-  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+  background: #000 url(assets/bg.jpg);
 }
 
 .starwars-demo {

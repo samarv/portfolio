@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Star Wars: The Force Awakens in CSS</title>
+  <title>Samar Vir: Full stack Jedi</title>
   
   
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:700'>
@@ -12,16 +12,16 @@
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       /* Animation properties */
 .star {
-  animation: star 10s ease-out infinite;
+  animation: star 10s ease-out;
 }
 .wars {
-  animation: wars 10s ease-out infinite;
+  animation: wars 10s ease-out;
 }
 .byline span {
-  animation: spin-letters 10s linear infinite;
+  animation: spin-letters 10s linear;
 }
 .byline {
-  animation: move-byline 10s linear infinite;
+  animation: move-byline 10s linear;
 }
 
 /* Keyframes */
@@ -88,7 +88,7 @@
 }
 
 /* Make the 3D work on the container */
-.starwars-demo {
+.homePage {
   perspective: 800px;
   transform-style: preserve3d;
 }
@@ -98,7 +98,7 @@ body {
   background: #000 url(assets/bg.jpg);
 }
 
-.starwars-demo {
+.homePage {
   height: 17em;
   left: 50%;
   position: absolute;
@@ -142,13 +142,13 @@ img {
 /*** Media queries for adjusting to different screen sizes ***/
 
 @media only screen and (max-width: 600px) {
-  .starwars-demo {
+  .homePage {
     font-size: 10px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .starwars-demo {
+  .homePage {
     font-size: 7px;
   }
 }
@@ -162,10 +162,10 @@ img {
 
 <body>
 
-  <div class="starwars-demo">
-    <img src="assets/samar.svg" alt="Star" class="star">
-    <img src="assets/vir.svg" alt="Wars" class="wars">
-    <h2 class="byline" id="byline">Web Jedi</h2>
+  <div class="homePage">
+    <img src="assets/samar.svg" alt="Samar" class="star">
+    <img src="assets/vir.svg" alt="Vir" class="wars">
+    <h2 class="byline" id="byline">Full Stack Jedi</h2>
   </div>
   
   
