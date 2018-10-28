@@ -179,6 +179,51 @@ img {
   top: 29%;
 }
 
+/* ADDED BY SNOWY */
+.content {
+  display: none;
+}
+.show-content {
+  display: block !important; 
+} 
+.tab-look{
+  display: flex !important; 
+  flex-direction: column;
+  padding: 10px 5%;
+  margin: 0 auto;
+  width: 55%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-content: space-around;
+  background-color: black;
+  border-radius: 10px;
+  opacity: 0.5;
+  font-size: 2.5rem;
+  color:gray;
+  border: 1px solid gray;
+}
+.hide-content {
+  display: none !important;
+}
+.close {
+  position:absolute;
+  right: 20rem;
+  top: 1.19rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-position: center;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  cursor: pointer;
+}
+.img-1 {
+  height: 20rem;
+  width: 18rem;
+}
+
+/* FINISH */
 
 
 /*** Media queries for adjusting to different screen sizes ***/
@@ -209,27 +254,56 @@ img {
 </head>
 
 <body>
+  <div class="container">     <!--added by snowy -->
+    <div class="main-content">  <!--added by snowy -->
+      <div class="homePage">
+        <img src="assets/samar.svg" alt="Samar" class="star">
+        <img src="assets/vir.svg" alt="Vir" class="wars">
+        <h2 class="byline" id="byline">Full Stack Jedi</h2> 
+      </div>
+      <div class="navBar">
+        <div class="navItem" data-tab="1">    <!--data types were added by snowy -->
+            <a href="#about">About</a>
+        </div>
+        <div class="navItem" data-tab="2">    <!--data types were added by snowy -->
+            <a href="#blog">Blog</a>
+        </div>
+        <div class="navItem" data-tab="3">    <!--data types were added by snowy -->
+            <a href="#work">Work</a>
+        </div>
+        <div class="navItem" data-tab="4">    <!--data types were added by snowy -->
+            <a href="#contact">Contact</a>
+        </div>
+      </div>  
+     </div> 
 
-  <div class="homePage">
-    <img src="assets/samar.svg" alt="Samar" class="star">
-    <img src="assets/vir.svg" alt="Vir" class="wars">
-    <h2 class="byline" id="byline">Full Stack Jedi</h2> 
-  </div>
-  <div class="navBar">
-    <div class="navItem">
-        <a href="#about">About</a>
+     <!--added by snowy -->
+    <div class="tab-content">
+      <div class="content" data-tab="1">
+        <div class="close">  </div> 
+        <h1>About: Elon Musk</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Elon_Musk_2015.jpg/800px-Elon_Musk_2015.jpg" class="img-1" alt="Elon">
+        <p>Elon Reeve Musk (born June 28, 1971) is a South African-born American entrepreneur and businessman who founded X.com in 1999 (which later became PayPal), SpaceX in 2002 and Tesla Motors in 2003. Musk became a multimillionaire in his late 20s when he sold his start-up company, Zip2, to a division of Compaq Computers. Musk made headlines in May 2012, when SpaceX launched a rocket that would send the first commercial vehicle to the International Space Station.Musk founded his third company, Space Exploration Technologies Corporation, or SpaceX, in 2002 with the intention of building spacecraft for commercial space travel. By 2008, SpaceX was well established, and NASA awarded the company the contract to handle cargo transport for the International Space Station—with plans for astronaut transport in the future—in a move to replace NASA’s own space shuttle missions. He bolstered his portfolio with the purchase of SolarCity in 2016, and cemented his standing as a leader of industry by taking on an advisory role in the early days of President Donald Trump's administration.</p>
+      </div>
+      <div class="content" data-tab="2">
+        <div class="close">  </div>
+        <h1>Blog: Elon Musk</h1>
+        <p>Elon Reeve Musk (born June 28, 1971) is a South African-born American entrepreneur and businessman who founded X.com in 1999 (which later became PayPal), SpaceX in 2002 and Tesla Motors in 2003. Musk became a multimillionaire in his late 20s when he sold his start-up company, Zip2, to a division of Compaq Computers. Musk made headlines in May 2012, when SpaceX launched a rocket that would send the first commercial vehicle to the International Space Station. He bolstered his portfolio with the purchase of SolarCity in 2016, and cemented his standing as a leader of industry by taking on an advisory role in the early days of President Donald Trump's administration.</p>
+      </div>
+      <div class="content" data-tab="3">
+        <div class="close">  </div>
+        <h1>Work: Elon Musk</h1>
+        <p>Musk founded his third company, Space Exploration Technologies Corporation, or SpaceX, in 2002 with the intention of building spacecraft for commercial space travel. By 2008, SpaceX was well established, and NASA awarded the company the contract to handle cargo transport for the International Space Station—with plans for astronaut transport in the future—in a move to replace NASA’s own space shuttle missions.</p>
+      </div>
+      <div class="content" data-tab="4">
+        <div class="close">  </div>
+        <h1>Contact: Elon Musk</h1>
+        <p>Elon Reeve Musk (born June 28, 1971) is a South African-born American entrepreneur and businessman who founded X.com in 1999 (which later became PayPal), SpaceX in 2002 and Tesla Motors in 2003. Musk became a multimillionaire in his late 20s when he sold his start-up company, Zip2, to a division of Compaq Computers. Musk made headlines in May 2012, when SpaceX launched a rocket that would send the first commercial vehicle to the International Space Station. He bolstered his portfolio with the purchase of SolarCity in 2016, and cemented his standing as a leader of industry by taking on an advisory role in the early days of President Donald Trump's administration.</p>
+      </div>
     </div>
-    <div class="navItem">
-        <a href="#blog">Blog</a>
-    </div>
-    <div class="navItem">
-        <a href="#work">Work</a>
-    </div>
-    <div class="navItem">
-        <a href="#contact">Contact</a>
-    </div>
-  </div>   
-  <script  src="js/index.js"></script>
+
+    <script  src="js/index.js"></script>
+</div>
 </body>
 
 
