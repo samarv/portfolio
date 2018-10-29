@@ -28,7 +28,25 @@
   animation: move-byline 6s linear;
 }
 
+.landingPage{
+  display:flex;
+}
 
+.aboutPage{
+  display: none;
+}
+
+.blogPage{
+  display: none;
+}
+
+.contactPage{
+  display: none;
+}
+
+.portfolioPage{
+  display: none;
+}
 
 /* Keyframes */
 @keyframes star {
@@ -127,7 +145,7 @@ body {
 
 }
 
-.navItem a{
+.navItem{
   margin: 10px;
   padding: 10px;
   color: #fff;
@@ -210,6 +228,7 @@ img {
 
 <body>
 
+ <div class="landingPage">
   <div class="homePage">
     <img src="assets/samar.svg" alt="Samar" class="star">
     <img src="assets/vir.svg" alt="Vir" class="wars">
@@ -217,18 +236,44 @@ img {
   </div>
   <div class="navBar">
     <div class="navItem">
-        <a href="#about">About</a>
+        <span  onclick="openPage('aboutPage')">About</span>
     </div>
     <div class="navItem">
-        <a href="#blog">Blog</a>
+      <span  onclick="openPage('blogPage')">Blog</span>
     </div>
     <div class="navItem">
-        <a href="#work">Work</a>
+      <span  onclick="openPage('portfolioPage')">Work</span>
     </div>
     <div class="navItem">
-        <a href="#contact">Contact</a>
+      <span  onclick="openPage('contactPage')">Contact</span>
     </div>
   </div>   
+ </div>
+
+ <div class="aboutPage">
+  <div>
+    ABOUT
+  </div>
+ </div>
+
+ <div class="blogPage">
+    <div>
+      BLOG
+    </div>
+ </div>
+
+ <div class="portfolioPage">
+    <div>
+      Portfolio
+    </div>
+ </div>
+
+ <div class="contactPage">
+    <div>
+      contact
+    </div>
+ </div>
+
   <script  src="js/index.js"></script>
 </body>
 

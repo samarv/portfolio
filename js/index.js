@@ -17,19 +17,32 @@ for(i=0;i<bylineArr.length;i++){									// Loop for every letter
   }
 }
 
-function openTab(Tab,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
+function openPage(pageName) {
+  const pn = document.getElementsByClassName("landingPage");
+  console.log("pn", pn)
+  for (i = 0; i < pn.length; i++) {
+    pn[i].style.display = "none";
+  }
+  const tabcontent = document.getElementsByClassName(pageName);
+  console.log("tabcontent", tabcontent)
   for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+    tabcontent[i].style.display = "flex";
   }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].style.backgroundColor = "";
+
+}
+
+
+function closePage(pageName) {
+  const pn = document.getElementsByClassName("landingPage");
+  console.log("pn", pn)
+  for (i = 0; i < pn.length; i++) {
+    pn[i].style.display = "flex";
   }
-  document.getElementById(Tab).style.display = "block";
-  elmnt.style.backgroundColor = color;
+  const tabcontent = document.getElementsByClassName(pageName);
+  console.log("tabcontent", tabcontent)
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 
 }
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
