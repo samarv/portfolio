@@ -26,11 +26,8 @@ class Nav {
       this.navClick();
     });
     this.navData = this.navItem.dataset.tab;
-
     this.content1 = document.querySelector(`.content[data-tab="${this.navData}"]`);
-
     this.tabcontent = document.querySelector('.tab-content')
-    
     this.content1 = new Content(this.content1);
 
   };
@@ -40,6 +37,7 @@ class Nav {
     this.navItem.parentNode.parentNode.classList.replace('show-content','hide-content');
     this.content1.showContent();
     this.content1.tabLook();
+    TweenMax.from(".content", 0.5 ,{opacity: 0, scale:0,ease:Back.easeOut});
   };
 
 };
@@ -75,6 +73,15 @@ class CloseItem {
     this.close.addEventListener("click", () => {
       this.closeClick();
     });
+    this.close.addEventListener("click", () => {
+      this.closeClick();
+    });
+    this.close.addEventListener("mouseenter", () => {                           //LOOK AT THIS AGAIN
+      this.closeHover();
+    });
+    this.close.addEventListener("mouseleave", () => {
+      this.closeHoverOff();
+    });
 
   };
   //Methods
@@ -82,6 +89,12 @@ class CloseItem {
     hide(this.close.parentNode);
     show(mainContent);
     remove(this.close.parentNode);
+  };
+  closeHover() {
+    this.close.classList.add(".close-hover")
+  };
+  closeHoverOff() {
+    this.close.classList.remove(".close-hover")
   };
 
 };
@@ -117,4 +130,4 @@ function show(className) {
   };
 
 
-//TweenMax.to(".content", 1.5 ,{opacity: 0.6,y:100, scale:1,ease:Bounce.easeOut});
+TweenMax.from(".navItem", 1.5 ,{opacity: 0, scale:0,ease:Elastic.easeOut,delay:6});
