@@ -27,39 +27,37 @@ class Nav {
     });
     this.navData = this.navItem.dataset.tab;
 
-    this.Content1 = document.querySelector(`.content[data-tab="${this.navData}"]`);
+    this.content1 = document.querySelector(`.content[data-tab="${this.navData}"]`);
 
     this.tabcontent = document.querySelector('.tab-content')
-
-    console.log("tc", this.Content1)
     
-    this.Content1 = new Content(this.Content1);
+    this.content1 = new Content(this.content1);
 
   };
   //Methods
   navClick() {
     this.navItem.parentNode.parentNode.classList.add('show-content');
     this.navItem.parentNode.parentNode.classList.replace('show-content','hide-content');
-    this.Content1.showContent();
-    this.Content1.tabLook();
+    this.content1.showContent();
+    this.content1.tabLook();
   };
 
 };
 //2nd class
 
 class Content {
-  constructor(Content1) {
-    this.Content1 = Content1;
+  constructor(content1) {
+    this.content1 = content1;
 
   }
   //methods
   showContent() {
-    console.log(this.Content1)
-    this.Content1.classList.add('hide-content');
-    this.Content1.classList.replace('hide-content','show-content');
+    console.log(this.content1)
+    this.content1.classList.add('hide-content');
+    this.content1.classList.replace('hide-content','show-content');
   }
   tabLook() {
-    this.Content1.classList.toggle('tab-look');
+    this.content1.classList.toggle('tab-look');
   }
  
 }
@@ -69,7 +67,7 @@ let navs = document.querySelectorAll(".navItem");
 navs = Array.from(navs).map(navItem => new Nav(navItem));
 
 
-//tryin' somethin'
+//done somethin'
 
 class CloseItem {
   constructor(close2) {
@@ -94,7 +92,6 @@ const mainContent = document.querySelector('.main-content');
 console.log(mainContent);
 let close3 = document.querySelectorAll('.close');
 close3 = Array.from(close3).map(close => new CloseItem(close));
-const tabCon = document.querySelector('.tab-content');
 // const con = document.querySelector('.content');
 // console.log(con)
 
@@ -120,3 +117,4 @@ function show(className) {
   };
 
 
+//TweenMax.to(".content", 1.5 ,{opacity: 0.6,y:100, scale:1,ease:Bounce.easeOut});
