@@ -202,46 +202,6 @@ img {
 }
 
 
-body {font-family: "Lato", sans-serif;}
-
-.tablink {
-    background-color: #555;
-    color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-}
-
-.tablink:hover {
-    background-color: #777;
-}
-
-/* Style the tab content */
-.tabcontent {
-    color: white;
-    display: none;
-    padding: 50px;
-    text-align: center;
-}
-
-#Work {
-  background-color:red;
-}
-#Contact {
-  background-color:green;
-}
-#Blog {
-  background-color:blue;
-}
-#About {
-  background-color:orange;
-  }
-
-
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -250,50 +210,25 @@ body {font-family: "Lato", sans-serif;}
 
 <body>
 
-  <div class="home">
-    <div class="homePage">
-      <img src="assets/samar.svg" alt="Samar" class="star">
-      <img src="assets/vir.svg" alt="Vir" class="wars">
-      <h2 class="byline" id="byline">Full Stack Jedi</h2> 
+  <div class="homePage">
+    <img src="assets/samar.svg" alt="Samar" class="star">
+    <img src="assets/vir.svg" alt="Vir" class="wars">
+    <h2 class="byline" id="byline">Full Stack Jedi</h2> 
+  </div>
+  <div class="navBar">
+    <div class="navItem">
+        <a href="#about">About</a>
     </div>
-    <div class="navBar">
-      <div class="navItem">
-          <a onclick="openTab('About', this, 'orange')">About</a>
-      </div>
-      <div class="navItem">
-        <a onclick="openTab('Work', this, 'red')">Work</a>
-      </div>
-      <div class="navItem">
-        <a onclick="openTab('Blog', this, 'blue')">Blog</a>
-      </div>
-      <div class="navItem">
-        <a onclick="openTab('Contact', this, 'green')">Contact</a>
-      </div>    
-    </div> 
-  </div>
-  
-  <div id="Work" class="tabcontent">
-    <h1>Work</h1>
-    <p>Work </p>
-  </div>
-  
-  <div id="Contact" class="tabcontent">
-    <h1>Contact</h1>
-    <p>Contact </p> 
-  </div>
-  
-  <div id="Blog" class="tabcontent">
-    <h1>Blog</h1>
-    <p>Blog </p>
-  </div>
-
-  <div id="About" class="tabcontent">
-    <h1>About</h1>
-    <p>About </p>
-  </div>
-  
-  
-  
+    <div class="navItem">
+        <a href="#blog">Blog</a>
+    </div>
+    <div class="navItem">
+        <a href="#work">Work</a>
+    </div>
+    <div class="navItem">
+        <a href="#contact">Contact</a>
+    </div>
+  </div>   
   <script  src="js/index.js"></script>
 </body>
 
