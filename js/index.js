@@ -31,6 +31,7 @@ function openPage(pageName) {
 
 }
 
+// close page takes in pageName to close and opens landing page
 
 function closePage(pageName) {
   const pn = document.getElementsByClassName("landingPage");
@@ -45,4 +46,3 @@ function closePage(pageName) {
   }
 
 }
-// Get the element with id="defaultOpen" and click on it
