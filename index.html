@@ -34,10 +34,43 @@
 
 .aboutPage{
   display: none;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.backButton{
+  margin: 10px;
+  padding: 10px;
+  color: #fff;
+  font-family: "ITC Serif Gothic", Lato;
+  font-size: 0.25em;
+  left: -2em;
+  letter-spacing: 0.4em;
+  right: -2em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .blogPage{
   display: none;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+  border: 1px solid gray;
 }
 
 .contactPage{
@@ -47,6 +80,8 @@
 .portfolioPage{
   display: none;
 }
+
+
 
 /* Keyframes */
 @keyframes star {
@@ -102,7 +137,33 @@
   }
 }
 
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
 
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+	0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+	100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
 
 
 @keyframes move-byline {
@@ -252,13 +313,32 @@ img {
 
  <div class="aboutPage">
   <div>
-    <button onclick="closePage('aboutPage')">close</button>
+    <span class="backButton" onclick="closePage('aboutPage')"> < Back</span>
+    <div class="crawl">
+      <div class="title">
+        <p>Episode - 1</p>
+        <h1>About</h1>
+      </div>
+      
+      <p>It was 1996 AC Earth Bound Time, when it all started!</p>
+        
+      <p>It was a diffrent time Back then, there were no starships, No inter glactic travel and No way to be a baller. Computers changed everything!</p>
+
+      <p>Personal Computers were fascinating, even when they came out. Good old clunky mouce clicks could do more math than I could do in my entire life</p>
+  
+      <p>In 2003 EBT, I was 9 and my dad started teaching me about this thing called Internet. Now, with one click you could connect to anyone one! ANYONE</p>
+
+      <p>I was SOLD</p>
+
+      <p>After a Decade Later I started working with those machines. I could code them. I used stuff like React, redux, Node, mongo, Express to create products on the intenet that could tell stories. my stories. </p>
+    
+    </div>
   </div>
  </div>
 
  <div class="blogPage">
     <div>
-      <button onclick="closePage('blogPage')">close</button>
+      <span class="backButton" onclick="closePage('blogPage')"> < Back</span>
     </div>
  </div>
 
