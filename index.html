@@ -52,7 +52,7 @@
   padding: 10px;
   color: #fff;
   font-family: "ITC Serif Gothic", Lato;
-  font-size: 0.25em;
+  font-size: 0.20em;
   left: -2em;
   letter-spacing: 0.4em;
   right: -2em;
@@ -70,7 +70,6 @@
   font-weight: 600;
   letter-spacing: 6px;
   flex-direction: row;
-  justify-content: space-evenly;
   align-content: space-around;
   justify-content: space-between;
   padding: 10px;
@@ -90,9 +89,6 @@
   opacity: 0.9;
 }
 
-.blogText a{
-  color: #feda4a;
-}
 
 .contactPage{
   display: none;
@@ -107,10 +103,27 @@
   font-weight: 600;
   letter-spacing: 6px;
   flex-direction: row;
-  justify-content: space-evenly;
   align-content: space-around;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10px;
+}
+
+.portfolioText{
+  width: 50vw;
+  font-size: 20%;
+  border: 1px solid #feda4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: 2px;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.portfolioText a{
+  color: #feda4a;
 }
 
 table, tr, th, td {
@@ -309,6 +322,9 @@ img {
   .navItem a{
     font-size: 7px;
   }
+  .backButton {
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -316,6 +332,9 @@ img {
     font-size: 7px;
   }
   .navItem a{
+    font-size: 7px;
+  }
+  .backButton {
     font-size: 7px;
   }
 }
@@ -340,7 +359,7 @@ img {
         <span  onclick="openPage('aboutPage')">About</span>
     </div>
     <div class="navItem">
-      <span  onclick="openPage('blogPage')">Blog</span>
+      <span  onclick="openPage('blogPage')">Ideas</span>
     </div>
     <div class="navItem">
       <span  onclick="openPage('portfolioPage')">Projects</span>
@@ -377,8 +396,8 @@ img {
  </div>
 
  <div class="blogPage">
-    <div>
-      <span class="backButton" onclick="closePage('blogPage')">< BACK</span>
+    <div class="backButton">
+      <span onclick="closePage('blogPage')">< BACK</span>
     </div>
     
     <div class="blogText">
@@ -412,11 +431,11 @@ img {
 
 
  <div class="portfolioPage">
-    <div>
-        <span class="backButton" onclick="closePage('portfolioPage')">< BACK</span>
+    <div class="backButton">
+      <span onclick="closePage('portfolioPage')">< BACK</span>
     </div>
 
-    <div class="blogText">
+    <div class="portfolioText">
         <div class="title">
           <h1>Stuff I do! </h1>
         </div>
