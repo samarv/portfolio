@@ -34,10 +34,60 @@
 
 .aboutPage{
   display: none;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.backButton{
+  margin: 10px;
+  padding: 10px;
+  color: #fff;
+  font-family: "ITC Serif Gothic", Lato;
+  font-size: 0.25em;
+  left: -2em;
+  letter-spacing: 0.4em;
+  right: -2em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .blogPage{
   display: none;
+  width: 90vw;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: space-around;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.blogText{
+  width: 70vw;
+  font-size: 20%;
+  border: 1px solid #feda4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: 2px;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.7;
 }
 
 .contactPage{
@@ -47,6 +97,8 @@
 .portfolioPage{
   display: none;
 }
+
+
 
 /* Keyframes */
 @keyframes star {
@@ -102,7 +154,33 @@
   }
 }
 
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
 
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+	0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+	100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
 
 
 @keyframes move-byline {
@@ -252,14 +330,86 @@ img {
 
  <div class="aboutPage">
   <div>
-    <button onclick="closePage('aboutPage')">close</button>
+    <span class="backButton" onclick="closePage('aboutPage')"> < Back</span>
+    <div class="crawl">
+      <div class="title">
+        <p>Episode - 1</p>
+        <h1>About</h1>
+      </div>
+      
+      <p>It was 1996 AC Earth Bound Time, when it all started!</p>
+        
+      <p>It was a diffrent time Back then, there were no starships, No inter glactic travel and No way to be a baller. Computers changed everything!</p>
+
+      <p>Personal Computers were fascinating, even when they came out. Good old clunky mouce clicks could do more math than I could do in my entire life</p>
+  
+      <p>In 2003 EBT, I was 9 and my dad started teaching me about this thing called Internet. Now, with one click you could connect to anyone one! ANYONE</p>
+
+      <p>I was SOLD</p>
+
+      <p>After a Decade Later I started working with those machines. I could code them. I used stuff like React, redux, Node, mongo, Express to create products on the intenet that could tell stories. my stories. </p>
+    
+    </div>
   </div>
  </div>
 
  <div class="blogPage">
     <div>
-      <button onclick="closePage('blogPage')">close</button>
+      <span class="backButton" onclick="closePage('blogPage')">< BACK</span>
     </div>
+    
+    <div class="blogText">
+      <div class="title">
+        <h1>Blog</h1>
+        <h2>Framework to manage Complexity</h2>
+      </div>
+      
+        <h3>
+          What is complexity?
+        </h3>
+
+        <p>Wikipedia defines Complexity as "the state or quality of being complicated".</p>
+          
+        <h3>
+          Ok then, What is complicated?
+        </h3>
+
+        <h4> 
+            So, Complexity is just "the state consisting of many interconnecting parts or elements"
+        </h4>
+          
+        <h2>Kewl, but</h2>
+        <h3>
+            How can we manage Complexity?
+        </h3>
+        <h1>PCAP</h1>
+        <h1>Primitives</h1>
+        <p>
+            They are the building blocks of a system like +, - , *.
+        </p>
+        <h1>Components</h1>
+        <p>
+            They are the things/combinations you make of those primitives. For eg. -  if, While etc.
+        </p>
+        <h1>Abstraction</h1>
+        <p>
+            This is where you name your combinations and forget about them. For eg. - def a function and reuse it again and again.
+        </p>
+        <h1>Pattern</h1>
+        <p>
+            This is a regular and intelligible form or sequence discernible in the way in which something happens or is done. For eg. -  High order function that takes in a function and returns a function
+        </p>
+
+        <h3>
+            In software engineering lure, we often hear about "breaking down the problem into manageable chunks", this is just that. Composing problems into manageble chunks. Stop thing about things that have already been done. Create on top of what you have already built.  
+        </h3>
+      
+    </div>
+  </div>
+    </div>
+
+    
+
  </div>
 
  <div class="portfolioPage">
