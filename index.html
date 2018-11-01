@@ -93,6 +93,16 @@
 
 .contactPage{
   display: none;
+  width: 90vw;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
 .portfolioPage{
@@ -110,7 +120,7 @@
 }
 
 .portfolioText{
-  width: 50vw;
+  width: 60vw;
   font-size: 20%;
   border: 1px solid #feda4a;
   display: flex;
@@ -312,8 +322,41 @@ img {
   top: 29%;
 }
 
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
 
+input[type=submit] {
+    background-color: #feda4a;
+    color: green;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+input[type=submit]:hover {
+    background-color: #feda4a;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.social a{
+  border: 1px solid #feda4a;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+}
 /*** Media queries for adjusting to different screen sizes ***/
 
 @media only screen and (max-width: 600px) {
@@ -326,6 +369,12 @@ img {
   .backButton {
     font-size: 10px;
   }
+  .portfolioText{
+  font-size: 10px;
+  }
+  .blogText{
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -336,6 +385,12 @@ img {
     font-size: 7px;
   }
   .backButton {
+    font-size: 7px;
+  }
+  .portfolioText{
+    font-size: 7px;
+  }
+  .blogText{
     font-size: 7px;
   }
 }
@@ -478,10 +533,35 @@ img {
  </div>
 
  <div class="contactPage">
-    <div>
-      <button onclick="closePage('contactPage')">close</button>
-
+    <div class="backButton">
+      <span onclick="closePage('contactPage')">< BACK</span>
     </div>
+  
+    <div class="portfolioText">
+        <div class="title">
+          <h1>Contact</h1>
+        </div>
+        <div class="container">
+            <form class="gform" action="https://script.google.com/macros/s/AKfycbzITP-0x-CGtf_f_JY9PIrSMoVEzoVmcjjuHtyQ5hvcwI2CHht6/exec">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+          
+              <label for="subject">Message</label>
+              <textarea id="subject" name="subject" placeholder="your message goes here" style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+        </div>
+        
+        <div class="social">
+          <a href="https://github.com/samarv" target="_blank" >github</a>
+          <a href="https://www.linkedin.com/in/samar-vir" target="_blank">
+            linkedin
+          </a>
+        </div>
+        
+      </div>
  </div>
 
   <script  src="js/index.js"></script>
