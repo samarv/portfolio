@@ -52,13 +52,14 @@
   padding: 10px;
   color: #fff;
   font-family: "ITC Serif Gothic", Lato;
-  font-size: 0.25em;
+  font-size: 0.20em;
   left: -2em;
   letter-spacing: 0.4em;
   right: -2em;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  cursor:pointer;
 }
 
 .blogPage{
@@ -70,7 +71,6 @@
   font-weight: 600;
   letter-spacing: 6px;
   flex-direction: row;
-  justify-content: space-evenly;
   align-content: space-around;
   justify-content: space-between;
   padding: 10px;
@@ -87,17 +87,64 @@
   letter-spacing: 2px;
   padding: 10px;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.9;
 }
+
 
 .contactPage{
   display: none;
+  width: 90vw;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
 .portfolioPage{
   display: none;
+  width: 90vw;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
+.portfolioText{
+  width: 60vw;
+  font-size: 20%;
+  border: 1px solid #feda4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: 2px;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.portfolioText a{
+  color: #feda4a;
+}
+
+table, tr, th, td {
+    border: 1px solid #feda4a;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
 
 
 /* Keyframes */
@@ -235,7 +282,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
- 
+  cursor:pointer;
 }
 
 
@@ -275,8 +322,41 @@ img {
   top: 29%;
 }
 
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
 
+input[type=submit] {
+    background-color: #feda4a;
+    color: green;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+input[type=submit]:hover {
+    background-color: #feda4a;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.social a{
+  border: 1px solid #feda4a;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+}
 /*** Media queries for adjusting to different screen sizes ***/
 
 @media only screen and (max-width: 600px) {
@@ -286,6 +366,15 @@ img {
   .navItem a{
     font-size: 7px;
   }
+  .backButton {
+    font-size: 10px;
+  }
+  .portfolioText{
+  font-size: 10px;
+  }
+  .blogText{
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -293,6 +382,15 @@ img {
     font-size: 7px;
   }
   .navItem a{
+    font-size: 7px;
+  }
+  .backButton {
+    font-size: 7px;
+  }
+  .portfolioText{
+    font-size: 7px;
+  }
+  .blogText{
     font-size: 7px;
   }
 }
@@ -317,10 +415,10 @@ img {
         <span  onclick="openPage('aboutPage')">About</span>
     </div>
     <div class="navItem">
-      <span  onclick="openPage('blogPage')">Blog</span>
+      <span  onclick="openPage('blogPage')">Ideas</span>
     </div>
     <div class="navItem">
-      <span  onclick="openPage('portfolioPage')">Work</span>
+      <span  onclick="openPage('portfolioPage')">Projects</span>
     </div>
     <div class="navItem">
       <span  onclick="openPage('contactPage')">Contact</span>
@@ -354,48 +452,28 @@ img {
  </div>
 
  <div class="blogPage">
-    <div>
-      <span class="backButton" onclick="closePage('blogPage')">< BACK</span>
+    <div class="backButton">
+      <span onclick="closePage('blogPage')">< BACK</span>
     </div>
     
     <div class="blogText">
       <div class="title">
-        <h1>Blog</h1>
-        <h2>Framework to manage Complexity</h2>
+        <h1>Framework to manage Complexity</h1>
       </div>
-      
-        <h3>
-          What is complexity?
-        </h3>
-
-        <p>Wikipedia defines Complexity as "the state or quality of being complicated".</p>
-          
-        <h3>
-          Ok then, What is complicated?
-        </h3>
-
-        <h4> 
-            So, Complexity is just "the state consisting of many interconnecting parts or elements"
-        </h4>
-          
-        <h2>Kewl, but</h2>
-        <h3>
-            How can we manage Complexity?
-        </h3>
-        <h1>PCAP</h1>
-        <h1>Primitives</h1>
+        <h2>PCAP</h2>
+        <h2>Primitives</h2>
         <p>
             They are the building blocks of a system like +, - , *.
         </p>
-        <h1>Components</h1>
+        <h2>Components</h2>
         <p>
             They are the things/combinations you make of those primitives. For eg. -  if, While etc.
         </p>
-        <h1>Abstraction</h1>
+        <h2>Abstractions</h2>
         <p>
             This is where you name your combinations and forget about them. For eg. - def a function and reuse it again and again.
         </p>
-        <h1>Pattern</h1>
+        <h2>Patterns</h2>
         <p>
             This is a regular and intelligible form or sequence discernible in the way in which something happens or is done. For eg. -  High order function that takes in a function and returns a function
         </p>
@@ -406,23 +484,84 @@ img {
       
     </div>
   </div>
-    </div>
 
-    
-
- </div>
 
  <div class="portfolioPage">
-    <div>
-      <button onclick="closePage('portfolioPage')">close</button>
+    <div class="backButton">
+      <span onclick="closePage('portfolioPage')">< BACK</span>
     </div>
+
+    <div class="portfolioText">
+        <div class="title">
+          <h1>Stuff I do! </h1>
+        </div>
+        <table style="width:100%">
+            <tr>
+              <th>Name</th>
+              <th>Description</th> 
+              <th>Links</th>
+            </tr>
+            <tr>
+              <td>MEET A DEV</td>
+              <td>A Web app to connect employers with developers. Developers can post a profile and search through potential job listings created by employers. Employers can search for developers by a variety of filtering options including location, languages, etc. This was a group project in which I focused on the front end styling and animations.</td> 
+              <td><a href="https://www.meetdev.app/meetdev" target="_blank">Website</a>,<a href="https://github.com/Lambda-School-Labs/CS10-Developer-Profiles" target="_blank">github</a> </td>
+            </tr>
+            <tr>
+              <td>Nametag</td>
+              <td>An Ios and Android Chat app that connects you with people around you. it's realtime messaging that's secure and easy to use.</td> 
+              <td><a href="https://slack-files.com/T4JUEB3ME-FDLRUJV32-cfb33fabaa" target="_blank">Live Demo</a></td>
+            </tr>
+            <tr>
+                <td>Blood bank near me</td>
+                <td>A React app to to get the list of all the blood banks in your city! you can just type in your city name and voila, you can get all the contact information for the blood banks near you!</td> 
+                <td><a href="https://github.com/samarv/bloodBankNearMe" target="_blank">Github</a></td>
+            </tr>
+            <tr>
+                <td>Neural nets for Learning</td>
+                <td>Simple and intuitive python functions for Neural Networks. Rather than, creating models with libraries like tensorflow. Get your hands dirty, creaty models from Vanilla Python. taste it. it's FUN.</td> 
+                <td><a href="https://github.com/samarv/special-potato" target="_blank">Github</a></td>
+            </tr>
+            <tr>
+                <td>tranceFligh</td>
+                <td>My attempt at creating awful awful electronic music. Definately WINNING at this. p.s - Open at your own risk.</td> 
+                <td><a href="https://slack-files.com/T4JUEB3ME-FDSD1887K-9c4cdf7b3c" target="_blank">Music</a></td>
+            </tr>
+          </table>
+          
+        
+      </div>
  </div>
 
  <div class="contactPage">
-    <div>
-      <button onclick="closePage('contactPage')">close</button>
-
+    <div class="backButton">
+      <span onclick="closePage('contactPage')">< BACK</span>
     </div>
+  
+    <div class="portfolioText">
+        <div class="title">
+          <h1>Contact</h1>
+        </div>
+        <div class="container">
+            <form class="gform" action="https://script.google.com/macros/s/AKfycbzITP-0x-CGtf_f_JY9PIrSMoVEzoVmcjjuHtyQ5hvcwI2CHht6/exec">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+          
+              <label for="subject">Message</label>
+              <textarea id="subject" name="subject" placeholder="your message goes here" style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+        </div>
+        
+        <div class="social">
+          <a href="https://github.com/samarv" target="_blank" >github</a>
+          <a href="https://www.linkedin.com/in/samar-vir" target="_blank">
+            linkedin
+          </a>
+        </div>
+        
+      </div>
  </div>
 
   <script  src="js/index.js"></script>
