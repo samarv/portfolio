@@ -130,4 +130,4 @@ function show(className) {
   };
 
 
-TweenMax.from(".navItem", 1.5 ,{opacity: 0, scale:0,ease:Elastic.easeOut,delay:6});
+TweenMax.from(".navItem", 1.3 ,{opacity: 0, scale:0,ease:Power4.easeOut,delay:6});
