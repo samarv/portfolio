@@ -1,3 +1,3 @@
 # portfolio
 
-Deployed at www.samarvir.com
+Deployed at https://ishwantsingh.netlify.com
